@@ -11,8 +11,14 @@ sock.connect(server_address)
 try:
     # Send data
     fname = input("input filename and its extension : ")
-    with open(fname, 'rb') as file:
-        sock.sendfile(file, 0)
+    sock.send(fname.encode())
+
+    sname = 'recv_file'
+    with open(sname, 'wb') as file:
+        data = sock.recv(1024)
+        while data:
+            file.write(data)
+            data = sock.recv(1024)
     file.close()
 except:
     print("error")
