@@ -22,8 +22,11 @@ while True:
     fname = connection.recv(128)
     print(fname.decode())
 
-    with open(fname.decode(), 'rb') as file:
-        connection.sendfile(file, 0)
-    file.close()
+    try:
+        with open(fname.decode(), 'rb') as file:
+            connection.sendfile(file, 0)
+        file.close()
+    except:
+        print("unable to open file")
 
     connection.close()
