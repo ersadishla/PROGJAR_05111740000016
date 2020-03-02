@@ -4,7 +4,8 @@ Menggunakan wireshark, capture :
 2. Hasil Keluaran dari program udp_simple.py ke alamat 127.0.0.1 di port 5006
 
 ## Nomor 1
-1. Memilih capture file "Adapter for loopback traffic capture", klik dua kali.
+### Hasil Keluaran dari program udpfileclient.py ke alamat 127.0.0.1 ke port 5006
+1. Memilih capture file "Adapter for loopback traffic capture" pada wireshark, klik dua kali.
 2. Mengatur filter pada wireshark agar hanya menangkap paket yang menuju alamat 127.0.0.1 port 5006.
     ```
     ip.src == 127.0.0.1 && ip.dst ==127.0.0.1 && udp.port==5006
@@ -19,12 +20,14 @@ Menggunakan wireshark, capture :
     ```
     python udpfileclient.py
     ```
+    ![filter](img/nomor1_run.png)
 5. Cek paket pada wireshark
     ![result](img/nomor1_result.png)
     Bisa dilihat bahwa terdapat paket berukuran 1 byte sebanyak ukuran file ke alamat 127.0.0.1 port 5006
 
 ## Nomor 2
-1. Memilih capture file "Adapter for loopback traffic capture", klik dua kali.
+### Hasil Keluaran dari program udp_simple.py ke alamat 127.0.0.1 di port 5006
+1. Memilih capture file "Adapter for loopback traffic capture" pada wireshark, klik dua kali.
 2. Mengatur filter pada wireshark agar hanya menangkap paket yang menuju alamat 127.0.0.1 port 5006.
     ```
     udp && ip.dst ==127.0.0.1 && udp.port==5006
