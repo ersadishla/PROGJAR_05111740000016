@@ -1,7 +1,5 @@
-Tugas 1 : -- 
+Tugas 1 :
 
- 
- 
 
 Clone lah repository: https://github.com/rm77/progjar.git 
 
