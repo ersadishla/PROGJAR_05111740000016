@@ -42,9 +42,9 @@ Server dijalankan pada 10.151.254.62
 
 ## Poin 4
 Jalankan program client.py untuk konek ke server pada poin sebelumnya, kirimkan string yang sama 
-![image](img/poin4a.png)
+![image](img/poin4a.png)  
 Client konek ke 10.151.254.62
-![image](img/poin4b.png)
+![image](img/poin4b.png)  
 Respon dari server
 
 ## Poin 5
