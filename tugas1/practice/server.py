@@ -3,7 +3,7 @@ import socket
 import _thread
 
 def initSocket( port_number ):
-    server_address = ('0.0.0.0', port_number)
+    server_address = ('127.0.0.1', port_number)
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print(f"start server on {server_address[0]} port {server_address[-1]}")
     sock.bind(server_address)
