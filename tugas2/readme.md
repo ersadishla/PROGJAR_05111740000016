@@ -1,3 +1,7 @@
+[Soal Modifikasi](#Modifikasi)
+
+[Soal Asli](#Asli) 
+
 # Modifikasi
 Paket dikirim dari komputer lain yang menuju ke komputer kita  
 Dalam kasus ini IP receiver = 10.151.254.27 dan IP sender = 10.151.254.62  
@@ -46,7 +50,7 @@ Dalam kasus ini IP receiver = 10.151.254.27 dan IP sender = 10.151.254.62
     ![result](img/mod_nomor2_res.png)
     Bisa dilihat bahwa terdapat paket yang berisi pesan yang terkirim sesuai ukurannya ke alamat IP kita port 5006 dari IP tempat kita menjalankan udp_simple.py
 
-# Original
+# Asli
 Menggunakan wireshark, capture :
 1. Hasil Keluaran dari program udpfileclient.py ke alamat 127.0.0.1 ke port 5006
 2. Hasil Keluaran dari program udp_simple.py ke alamat 127.0.0.1 di port 5006
