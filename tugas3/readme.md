@@ -1,37 +1,21 @@
-import logging
-import requests
-import os
-import threading
+# Tugas 3
 
-def download_gambar(url=None):
-    if (url is None):
-        return False
-    ff = requests.get(url)
-    tipe = dict()
-    tipe['image/png']='png'
-    tipe['image/jpg']='jpg'
-    tipe['image/jpeg']='jpg'
+Download gambar menggunakan thread (modifikasi dari client_3.py)
 
-    content_type = ff.headers['Content-Type']
-    logging.warning(content_type)
-    if (content_type in list(tipe.keys())):
-        namafile = os.path.basename(url)
-        ekstensi = tipe[content_type]
-        logging.warning(f"writing {namafile}.{ekstensi}")
-        fp = open(f"{namafile}.{ekstensi}","wb")
-        fp.write(ff.content)
-        fp.close()
-    else:
-        return False
+![filter](img/tobedownloaded.png)
+Gambar yang akan didownload
 
-if __name__=='__main__':
+## Modifikasi file client_3.py
+```py
     listImages = [
         "https://www.its.ac.id/news/wp-content/uploads/sites/2/2020/02/WhatsApp-Image-2020-02-26-at-17.18.55-768x511.jpeg",
         "https://www.its.ac.id/news/wp-content/uploads/sites/2/2020/02/WhatsApp-Image-2020-02-25-at-17.28.56-768x512.jpeg",
         "https://www.its.ac.id/news/wp-content/uploads/sites/2/2020/02/WhatsApp-Image-2020-02-24-at-18.06.47-768x434.jpeg",
         "https://www.its.ac.id/news/wp-content/uploads/sites/2/2020/02/WhatsApp-Image-2020-02-24-at-17.02.48-1-768x512.jpeg"
     ]
-
+```
+Memasukkan url gambar ke dalam list, yang kemudian akan diiterasi
+```py
     threads = []
     for image in listImages:
         t = threading.Thread(target=download_gambar,args=(image,))
@@ -39,3 +23,9 @@ if __name__=='__main__':
 
     for thr in threads:
         thr.start()
+```
+Memasukkan fungsi download ke dalam thread
+
+## Output gambar yang telah didownload
+![res](img/resultinvs.png)
+![res](img/resultinex.png)
