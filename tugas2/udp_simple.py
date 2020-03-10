@@ -1,7 +1,7 @@
 
 import socket
 
-TARGET_IP = "127.0.0.1"
+TARGET_IP = "10.151.254.27"
 TARGET_PORT = 5006
 
 message = "Ersad Ahmad Ishlahuddin"
