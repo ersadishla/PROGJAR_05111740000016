@@ -60,13 +60,13 @@ class File:
                     for byte in file_to_send:
                         buff.sendall(byte)
                 file_to_send.close()
-                return "File Downloaded"
+                return True
 
         size = 0
         val = size.to_bytes(4,byteorder='big')
         buff.send(val)
-        return "No Such File"
+        return "Cannot found file in fileServer directory"
     
     def list_data(self):
-        k = [{'fileName':self.data[i]['fileName'],'lastModified':self.data[i]['lastModified']} for i in self.data.keys()]
-        return k
+        ret = [ self.data[i] for i in self.data.keys() ]
+        return ret
