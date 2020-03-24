@@ -48,7 +48,7 @@ Daftar fitur yang tersedia:
 
     - Deskripsi  
     Fitur ini memperbolehkan client untuk upload sebuah file ke server. File yang diupload akan mempunyai nama dan ekstensi yang sama  
-    File yang akan diupload harus ada di direktorifileClient dan file yang telah diupload akan disimpan di dalam direktori fileServer  
+    File yang akan diupload harus ada di direktori fileClient dan file yang telah diupload akan disimpan di dalam direktori fileServer  
     - Cara Request  
     Command: **`upload`**<br>
     Value: File yang akan diupload<br>
@@ -59,15 +59,15 @@ Daftar fitur yang tersedia:
     Jika sukses **Upload Success**. Jika gagal **Error**
     - Contoh  
     Jalankan perintah  
-    ![](img/upload.png)
-    ![](img/upload2.png)
+    ![](img/upload.png)  
+    ![](img/upload2.png)  
     test.txt telah bertambah di fileServer
 
 - ### Mengambil File (Download)
 
     - Deskripsi  
     Fitur ini memperbolehkan client untuk download sebuah file dari server. File yang didownload akan mempunyai nama dan ekstensi yang sama  
-    File yang akan diupload harus ada di direktorifileServer dan file yang telah didownload akan disimpan di dalam direktori fileClient.  
+    File yang akan diupload harus ada di direktori fileServer dan file yang telah didownload akan disimpan di dalam direktori fileClient.  
     - Cara Request  
     Command: **`download`**<br>
     Value: File yang akan didownload<br>
@@ -78,11 +78,11 @@ Daftar fitur yang tersedia:
     Jika sukses **Download Success**. Jika gagal **Error**
     - Contoh  
     Hapus terlebih dahulu file test.txt yang telah didownload tadi  
-    ![](img/download2.png)
+    ![](img/download2.png)  
     Jalankan perintah  
-    ![](img/download.png)
-    ![](img/download3.png)
-    test.txt telah bertambah di fileClient
+    ![](img/download.png)  
+    ![](img/download3.png)  
+    test.txt telah bertambah di fileClient  
 
 
 - ### Melihat Daftar File
@@ -97,5 +97,5 @@ Daftar fitur yang tersedia:
     - Response  
     Jika sukses **JSON Daftar FIle**. Jika gagal **Error**
     - Contoh  
-    ![](img/list.png)
+    ![](img/list.png)  
     Terdapat 4 file di dalam server
