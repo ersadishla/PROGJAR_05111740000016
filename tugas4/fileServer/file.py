@@ -6,14 +6,14 @@ import os
 
 class File:
     def __init__(self):
-        self.data = shelve.open('db/file.dat')
+        self.data = shelve.open('../db/file.dat')
 
     def is_exist(self,fileName=None):
         timestamp = datetime.now()
         for i in self.data.keys():
             if(self.data[i]['fileName'].lower()==fileName.lower()):
                 temp = self.data[i]
-                temp['lastModified'] = timestamp
+                temp['lastModified'] = str(timestamp)
                 self.data[i] = temp
                 return True
         return False
@@ -37,19 +37,13 @@ class File:
                 file_recv.write(byte_n)
         file_recv.close()
 
-        duplicate = False
-        for i in self.data.keys():
-            try:    
-                if(self.data[i]['fileName'].lower()==fileName.lower()):
-                    temp = self.data[i]
-                    temp['lastModified'] = str(timestamp)
-                    self.data[i] = temp
-                    duplicate = True
-            except:
-                duplicate = False
-        if not duplicate:
+        if not self.is_exist(fileName):
             id=str(uuid.uuid4())
-            data = dict(id=id,fileName=fileName,lastModified=str(timestamp))
+            data = {
+                "id": str(id),
+                "fileName": fileName,
+                "lastModified": str(timestamp)
+            }
             self.data[id]=data
         return True
         
@@ -76,7 +70,3 @@ class File:
     def list_data(self):
         k = [{'fileName':self.data[i]['fileName'],'lastModified':self.data[i]['lastModified']} for i in self.data.keys()]
         return k
-
-if __name__ == "__main__":
-    f = File()
-    print(f.list_data())
