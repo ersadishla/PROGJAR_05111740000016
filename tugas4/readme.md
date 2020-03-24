@@ -60,8 +60,8 @@ Daftar fitur yang tersedia:
     - Contoh  
     Jalankan perintah  
     ![](img/upload.png)  
+    test.txt telah bertambah di fileServer  
     ![](img/upload2.png)  
-    test.txt telah bertambah di fileServer
 
 - ### Mengambil File (Download)
 
@@ -81,8 +81,8 @@ Daftar fitur yang tersedia:
     ![](img/download2.png)  
     Jalankan perintah  
     ![](img/download.png)  
-    ![](img/download3.png)  
     test.txt telah bertambah di fileClient  
+    ![](img/download3.png)  
 
 
 - ### Melihat Daftar File
