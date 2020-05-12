@@ -1,4 +1,4 @@
-## Tugas 8 Pemrograman Jaringan
+## Tugas 9 Pemrograman Jaringan
 
 ## Soal
 1. Pull update terakhir
@@ -33,14 +33,14 @@
     ![](img/tc100.png)  
 
 ## Tabel
-### Async
+### server_async_http.py
 | Concurrency level | Time taken for test (seconds) | Complete request | Failed request | Total transferred (bytes) | Request per second | Time per request (ms) | Transfer rate (Kbytes/sec) |
 |:-------:|:-----------------:|:-----------------------------:|:----------------:|:--------------:|:-------------------------:|:------------------:|:---------------------:|:--------------------------:|
 |1|4.727|1000|0|122000|211.55|4.727|25.20|
 |10|71.767|1000|0|122000|13.93|717.667|1.66|
 |50|72.292|1000|0|122000|13.83|3614.610|1.65|
 |100|72.227|1000|0|122000|13.85|7222.744|1.65|
-### Thread
+### server_thread_http.py
 | Concurrency level | Time taken for test (seconds) | Complete request | Failed request | Total transferred (bytes) | Request per second | Time per request (ms) | Transfer rate (Kbytes/sec) |
 |:-------:|:-----------------:|:-----------------------------:|:----------------:|:--------------:|:-------------------------:|:------------------:|:---------------------:|:--------------------------:|
 |1|231.660|1000|0|122000|4.32|231.660|0.51|
